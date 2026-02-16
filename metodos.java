@@ -11,12 +11,12 @@ public class metodos {
             System.out.println("ingrese el cilindraje");
             o.setCilindraje(sc.nextInt());
             if(o.getCilindraje()<1700){
-                o.setPagoAnt(150000);
+                o.setPagoAnt((float) 150000);
             } else if(o.getCilindraje()>=1700 && o.getCilindraje()<2000){
-                o.setPagoAnt(200000);
+                o.setPagoAnt((float) 200000);
 
             } else {
-             o.setPagoAnt(250000);
+             o.setPagoAnt((float) 250000);
             };
              r[i]=o;
 
@@ -27,7 +27,7 @@ public class metodos {
 
     public objvehiculo[] calcularNue(objvehiculo[] r){
         for (int i = 0; i < r.length; i++) {
-            r[i].setPagoAct(r[i].getPagoAnt()*1.23);
+            r[i].setPagoAct((float) (r[i].getPagoAnt()*1.23));
             
         }
         return r;
